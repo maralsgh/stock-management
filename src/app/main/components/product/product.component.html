@@ -1,0 +1,27 @@
+
+
+<div *ngIf="product">
+
+  <mat-card class="p-2">
+    <mat-card-title>Name : {{product.name}}</mat-card-title>
+    <mat-card-content>Stock : {{product.stock}}</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button
+              color="primary"
+              [disabled]="loading"
+              (click)="openDialogAdd()"> Add</button>
+      <button mat-raised-button
+              color="accent"
+              [disabled]="loading"
+              (click)="openDialogRemove()">Purchase</button>
+    </mat-card-actions>
+    <mat-card-footer >
+      <mat-progress-bar [mode]="loading? 'indeterminate' : 'determinate'" ></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+
+</div>
+
+
+
+
